@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Session | DepthMynd Labs</title>
+<meta name="description" content="Request a complimentary 45-minute Personal Behavioural Insights Session for working professionals with DepthMynd Labs.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#2878B8;
+  --blue-dark:#1d6399;
+  --navy:#16324F;
+  --pale:#EAF3F8;
+  --paper:#F7F8FA;
+  --ink:#172B3A;
+  --muted:#5F7080;
+  --line:#DCE5EC;
+  --white:#fff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font:16px/1.65 "DM Sans",sans-serif;
+}
+
+a { color:inherit; text-decoration:none; }
+
+.container {
+  width:min(1080px,calc(100% - 40px));
+  margin:auto;
+}
+
+header {
+  background:white;
+  border-bottom:1px solid var(--line);
+}
+
+nav {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.logo {
+  font-family:Manrope,sans-serif;
+  font-size:21px;
+  font-weight:800;
+  color:var(--navy);
+}
+
+.logo span { color:var(--blue); }
+
+.nav-link {
+  color:var(--blue);
+  font-weight:700;
+}
+
+main { padding:65px 0; }
+
+.hero {
+  max-width:720px;
+  margin:0 auto 35px;
+  text-align:center;
+}
+
+.eyebrow {
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+h1,h2 {
+  font-family:Manrope,sans-serif;
+  color:var(--navy);
+  line-height:1.2;
+}
+
+h1 {
+  font-size:clamp(32px,5vw,48px);
+  margin:12px 0;
+}
+
+.hero p {
+  color:var(--muted);
+  font-size:17px;
+}
+
+.card {
+  max-width:760px;
+  margin:auto;
+  background:white;
+  padding:35px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 12px 35px rgba(22,50,79,.06);
+}
+
+.details {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:28px;
+}
+
+.detail {
+  background:var(--pale);
+  border-radius:10px;
+  padding:13px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:700;
+  font-size:14px;
+}
+
+h2 {
+  font-size:23px;
+  margin:0 0 8px;
+}
+
+.description {
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:19px;
+}
+
+.field {
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.full { grid-column:1/-1; }
+
+label {
+  font-weight:700;
+  font-size:14px;
+  color:var(--navy);
+}
+
+input,select,textarea {
+  width:100%;
+  padding:12px 13px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:white;
+  color:var(--ink);
+  font:inherit;
+  font-size:15px;
+}
+
+input:focus,select:focus,textarea:focus {
+  outline:2px solid #2878b833;
+  border-color:var(--blue);
+}
+
+textarea {
+  min-height:105px;
+  resize:vertical;
+}
+
+small {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.consent {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.consent input {
+  width:auto;
+  margin-top:5px;
+}
+
+button {
+  width:100%;
+  margin-top:22px;
+  padding:14px;
+  border:0;
+  border-radius:9px;
+  background:var(--blue);
+  color:white;
+  font:800 16px "DM Sans",sans-serif;
+  cursor:pointer;
+}
+
+button:hover { background:var(--blue-dark); }
+
+.note {
+  margin-top:18px;
+  padding:14px;
+  background:var(--paper);
+  border-radius:9px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.whatsapp {
+  display:block;
+  text-align:center;
+  margin-top:20px;
+  color:var(--blue);
+  font-weight:700;
+}
+
+footer {
+  text-align:center;
+  padding:25px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media(max-width:600px) {
+  main { padding:40px 0; }
+  .card { padding:22px 18px; }
+  .details { grid-template-columns:1fr; }
+  .form-grid { grid-template-columns:1fr; }
+  .full { grid-column:auto; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="/">DepthMynd <span>Labs</span></a>
+    <a class="nav-link" href="/">Back to website</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="eyebrow">Complimentary Pilot Session</div>
+    <h1>Personal Behavioural Insights Session</h1>
+    <p>
+      Take 45 minutes to understand your patterns,
+      gain perspective and identify practical next steps.
+      Designed for working professionals.
+    </p>
+  </section>
+
+  <section class="card">
+
+    <div class="details">
+      <div class="detail">45-minute session</div>
+      <div class="detail">Online</div>
+      <div class="detail">Complimentary pilot</div>
+    </div>
+
+    <h2>Request your session</h2>
+    <p class="description">
+      Share a few details and your preferred schedule.
+      We'll contact you to confirm the appointment.
+    </p>
+
+    <form action="https://formspree.io/f/xljjvkzz"
+      method="POST">
+
+      <input type="hidden" name="_subject"
+        value="New Personal Behavioural Insights Session Booking">
+
+      <div style="display:none">
+        <label>Leave this field empty
+          <input name="_gotcha" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Full name *</label>
+          <input id="name" name="booking_name"
+            autocomplete="name" required
+            placeholder="Your name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="booking_email"
+            type="email" autocomplete="email"
+            required placeholder="you@example.com">
+        </div>
+
+        <div class="field full">
+          <label for="phone">WhatsApp number *</label>
+          <input id="phone" name="booking_whatsapp"
+            type="tel" autocomplete="tel"
+            required placeholder="+91 98765 43210">
+        </div>
+
+        <div class="field">
+          <label for="date">Preferred date *</label>
+          <input id="date" name="preferred_date"
+            type="date" required>
+        </div>
+
+        <div class="field">
+          <label for="time">Preferred time *</label>
+          <select id="time" name="preferred_time" required>
+            <option value="">Choose a time</option>
+            <option>9 AM – 12 PM</option>
+            <option>12 PM – 3 PM</option>
+            <option>3 PM – 6 PM</option>
+            <option>6 PM – 9 PM</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="alternate">Alternate date (optional)</label>
+          <input id="alternate" name="alternate_date"
+            type="date">
+        </div>
+
+        <div class="field full">
+          <label for="goal">
+            What would you like to explore in this session?
+          </label>
+          <textarea id="goal" name="session_goal"
+            placeholder="A brief description is enough. Please avoid sharing sensitive personal or medical information."></textarea>
+        </div>
+
+        <div class="field full">
+          <label class="consent">
+            <input type="checkbox" name="contact_consent"
+              value="Yes" required>
+            <span>I agree to be contacted by DepthMynd Labs
+              regarding this session request.</span>
+          </label>
+        </div>
+
+      </div>
+
+      <button type="submit">Request my session</button>
+
+    </form>
+
+    <div class="note">
+      <strong>Please note:</strong> This is a personal-development
+      and behavioural-reflection session, not therapy,
+      diagnosis or clinical assessment. Submitting this form
+      is a request, not a confirmed appointment.
+    </div>
+
+    <a class="whatsapp"
+       href="https://wa.me/919019164530?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20DepthMynd%20session."
+       target="_blank" rel="noopener">
+      Have a question? Contact us on WhatsApp
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 DepthMynd Labs · From stuck to unstoppable
+</footer>
+
+</body>
+</html>
